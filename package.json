@@ -1,12 +1,12 @@
 {
-  "name": "devops-hello-world",
+  "name": "hello-world",
   "version": "1.0.0",
   "description": "extended version of expressjs.com/en/starter/hello-world.html",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "expressjs.com team and Viv Labs",
+  "author": "expressjs.com team",
   "license": "CC-BY-NC-SA-3.0",
   "dependencies": {
     "express": "^4.14.0"
