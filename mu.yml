@@ -1,0 +1,25 @@
+###
+
+###
+environments:
+- name: acceptance
+- name: production
+###
+# Configure the service with a route for paths /*
+# from the ALB to port 80 in the container
+###
+service:
+  name: frontend-hello
+  port: 8080
+  pathPatterns:
+    - /*
+  pipeline:
+    source:
+      provider: GitHub
+      # provide our git repo to pull the code from code-pipeline
+      repo: himasagaratluri/node-mu
+    build:
+      # the base image to build the node
+      # image provided by aws
+      # shell: aws codebuild list-curated-environment-images | grep -E "node"
+      image: aws/codebuild/nodejs:10.14.1
